@@ -5,7 +5,7 @@ var fs = require('fs');
 var Logger = exports.Logger = {};
 
 // create streams for logging
-var infoStream = fs.createWriteStream('logs/info.txt');
+var infoStream = fs.createWriteStream('logs/info.txt', {flags:'a'});
 var errorStream = fs.createWriteStream('logs/error.txt');
 var debugStream = fs.createWriteStream('logs/debug.txt');
 

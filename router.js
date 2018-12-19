@@ -6,12 +6,12 @@ var router = new express.Router();
 var logger = require('./logger').Logger;
 
 router.use(function timeLog(req, res, next) {
-  logger.info("Test Message");
+  logger.info("Trial Run");
   next();
 });
 
 router.get('/', function( req, res) {
-  res.send('Home Page');
+  res.send('Home Trial Page');
 });
 
 module.exports = router;
