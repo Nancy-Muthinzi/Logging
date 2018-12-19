@@ -8,3 +8,9 @@ var Logger = exports.Logger = {};
 var infoStream = fs.createWriteStream('logs/info.txt');
 var errorStream = fs.createWriteStream('logs/error.txt');
 var debugStream = fs.createWriteStream('logs/debug.txt');
+
+// create functions
+Logger.info = function(msg){
+  var message = new Date().toISOString() + " : " + msg + " \n";
+  infoStream.write(message);
+};
