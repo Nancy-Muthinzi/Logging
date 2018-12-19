@@ -10,7 +10,12 @@ var errorStream = fs.createWriteStream('logs/error.txt');
 var debugStream = fs.createWriteStream('logs/debug.txt');
 
 // create functions
-Logger.info = function(msg){
+Logger.info = function(msg) {
   var message = new Date().toISOString() + " : " + msg + " \n";
   infoStream.write(message);
+};
+
+Logger.debug = function(msg) {
+  var message = new Date().toISOString() + " : " + msg + " \n";
+  debugStream.write(message);
 };
