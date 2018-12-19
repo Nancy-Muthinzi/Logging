@@ -12,18 +12,18 @@ var debugStream = fs.createWriteStream('logs/debug.txt');
 // create functions
 // logger function
 Logger.info = function(msg) {
-  var message = new Date().toISOString() + " : " + msg + " \n";
+  var message = new Date().toISOString() + " : " + msg + "\n";
   infoStream.write(message);
 };
 
 // debug function
 Logger.debug = function(msg) {
-  var message = new Date().toISOString() + " : " + msg + " \n";
+  var message = new Date().toISOString() + " : " + msg + "\n";
   debugStream.write(message);
 };
 
 // error function
 Logger.error = function(msg) {
-  var message = new Date().toISOString() + " : " + msg + " \n";
-  infoStream.write(message);
+  var message = new Date().toISOString() + " : " + msg + "\n";
+  errorStream.write(message);
 };

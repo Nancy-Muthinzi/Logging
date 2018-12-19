@@ -1,7 +1,12 @@
 var express = require('express');
 var router = new express.Router();
 
+// import logger file
+// instantiate logger oject
+var logger = require('./logger').Logger;
+
 router.use(function timeLog(req, res, next) {
+  logger.info("Test Message");
   next();
 });
 
